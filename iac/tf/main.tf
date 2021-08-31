@@ -24,7 +24,7 @@ provider "azurerm" {
 
 
 resource "azurerm_storage_account" "adf_storage" {
-  name                     = "<>"
+  name                     = "strvdevdemo"
   resource_group_name      = var.resource-group-dev
   location                 = var.resource-location
   account_tier             = "Standard"
@@ -49,15 +49,15 @@ resource "azurerm_storage_container" "adf_storage_target_01" {
 }
 
 resource "azurerm_data_factory" "adf_test" {
-  name                = "<>"
+  name                = "Azure_ADF_Demo"
   resource_group_name = var.resource-group-dev
   location            = var.resource-location
 
   github_configuration {
-    account_name    = "<>"
+    account_name    = "pachpolkalyani"
     branch_name     = "adf_dev"
     git_url         = "https://github.com"
-    repository_name = "adf_automation"
+    repository_name = "ADF_Demo"
     root_folder     = "/adf_artifacts"
   }
 
