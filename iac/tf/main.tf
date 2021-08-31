@@ -10,7 +10,7 @@
 terraform {
   backend "remote" {
     hostname = "app.terraform.io"
-    organization = ""
+    organization = "pachpolkalyani"
 
     workspaces {
       name = "adf_automation"
@@ -57,7 +57,7 @@ resource "azurerm_data_factory" "adf_test" {
     account_name    = "pachpolkalyani"
     branch_name     = "adf_dev"
     git_url         = "https://github.com"
-    repository_name = "ADF_Demo"
+    repository_name = "ADF_dev"
     root_folder     = "/adf_artifacts"
   }
 
