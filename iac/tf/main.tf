@@ -53,13 +53,13 @@ resource "azurerm_data_factory" "adf_test" {
   resource_group_name = var.resource-group-dev
   location            = var.resource-location
 
-  github_configuration {
-    account_name    = "pachpolkalyani"
-    branch_name     = "adf_dev"
-    git_url         = "https://github.com"
-    repository_name = "ADF_dev"
-    root_folder     = "/adf_artifacts"
-  }
+  #github_configuration {
+   # account_name    = "pachpolkalyani"
+   # branch_name     = "adf_dev"
+  #  git_url         = "https://github.com"
+    #repository_name = "ADF_dev"
+   # root_folder     = "/adf_artifacts"
+ # }
 
 }
 
