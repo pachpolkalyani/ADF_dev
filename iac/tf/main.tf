@@ -39,13 +39,13 @@ resource "azurerm_storage_account" "adf_storage" {
 resource "azurerm_storage_container" "adf_storage_source_01" {
   name                  = "adfstoragesource01"
   storage_account_name  = azurerm_storage_account.adf_storage.name
-  container_access_type = "private"
+  container_access_type = "public"
 }
 
 resource "azurerm_storage_container" "adf_storage_target_01" {
   name                  = "adfstoragetarget01"
   storage_account_name  = azurerm_storage_account.adf_storage.name
-  container_access_type = "private"
+  container_access_type = "public"
 }
 
 resource "azurerm_data_factory" "adf_test" {
